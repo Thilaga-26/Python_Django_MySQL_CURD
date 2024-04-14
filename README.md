@@ -52,26 +52,26 @@ Here's a link to the MySQL download page where you can find the appropriate inst
 1. Rename Table in Models: Open the models.py file in your Django app directory and change the table name as needed. For example, if you want to rename the Employee table to Staff, modify the class Meta section of your Employee model as follows:
 
 ```bash
-$ class Meta:
-    db_table = 'staff'
+class Meta:
+  db_table = 'staff'
 ```    
 
 2. Make Migrations: After configuring the database settings in the .env file, navigate to the root directory of your Django project and run the following command to create migrations based on the changes made to your models:
 
 ```bash
-$ python manage.py makemigrations
+python manage.py makemigrations
 ```
 3. Apply Migrations: Once the migrations are created, apply them to the database to update the schema:
 
 ```bash
-$ python manage.py migrate
+python manage.py migrate
 ```
 This command will create the necessary tables in the MySQL database based on the models defined in your models.py file.
 
 # For Running the Application
 
 ```bash
-$ python manage.py runserver
+python manage.py runserver
 ```
 Once the application is running, open your web browser.
 
