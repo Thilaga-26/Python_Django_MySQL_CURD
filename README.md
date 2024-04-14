@@ -45,7 +45,15 @@ Here's a link to the MySQL download page where you can find the appropriate inst
 
 2. Create Database: Once MySQL is installed, create a new database for the Django project. 
 
-3. Update .env File: We utilize the `dotenv/load_dotenv` module to manage environment variables. In the root directory of the project, create a .env file and fill in the following fields with your MySQL database details: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, and DB_NAME.
+3. Update .env File: We utilize the `dotenv/load_dotenv` module to manage environment variables. In the root directory of the project, create a .env file and fill in the following fields with your MySQL database details:
+
+```bash
+DB_HOST = <<Your Host Name>>
+DB_PORT = <<Your Port Number>>
+DB_USER = <<Your Username>>
+DB_PASSWORD = <<Your Password>>
+DB_NAME = <<Your Database Name>>
+```
 
 ## Migration
 
