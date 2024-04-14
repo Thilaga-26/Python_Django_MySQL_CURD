@@ -27,9 +27,9 @@ Install Django and other dependencies from the requirements.txt file
 pip install -r requirements.txt
 ```
    
-# Configuration and Migration and MySQLClient Setup
+# Configuration and Migration
 
-In this Django application, we use environment variables for configuration and migration for managing and applying changes to the database schema and MySQLClient for database management.
+In this Django application, we use environment variables for configuration and migration for managing and applying changes to the database schema.
 
 ## Configuration
 
@@ -67,10 +67,6 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 This command will create the necessary tables in the MySQL database based on the models defined in your models.py file.
-
-## MySQLClient Setup
-
-MySQLClient is configured to connect to a MySQL database. The configuration is specified in the `Employee_MS/Settings.py` file.
 
 # For Running the Application
 
