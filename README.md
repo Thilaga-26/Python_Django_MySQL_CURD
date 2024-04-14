@@ -21,17 +21,11 @@ cd <repository_name>
 
 # Installation
 
-To install Django
-
-```bash
-pip install django
-```
-To install Mysqlclient
-
-```bash
-pip install mysqlclient
-```
 Install Django and other dependencies from the requirements.txt file
+
+```bash
+pip install -r requirements.txt
+```
    
 # Configuration and Migration and MySQLClient Setup
 
