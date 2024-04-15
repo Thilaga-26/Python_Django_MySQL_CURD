@@ -21,21 +21,15 @@ cd <repository_name>
 
 # Installation
 
-To install Django
-
-```bash
-pip install django
-```
-To install Mysqlclient
-
-```bash
-pip install mysqlclient
-```
 Install Django and other dependencies from the requirements.txt file
-   
-# Configuration and Migration and MySQLClient Setup
 
-In this Django application, we use environment variables for configuration and migration for managing and applying changes to the database schema and MySQLClient for database management.
+```bash
+pip install -r requirements.txt
+```
+   
+# Configuration and Migration
+
+In this Django application, we use environment variables for configuration and migration for managing and applying changes to the database schema.
 
 ## Configuration
 
@@ -51,37 +45,44 @@ Here's a link to the MySQL download page where you can find the appropriate inst
 
 2. Create Database: Once MySQL is installed, create a new database for the Django project. 
 
-3. Update .env File: We utilize the `dotenv/load_dotenv` module to manage environment variables. In the root directory of the project, create a .env file and fill in the following fields with your MySQL database details: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, and DB_NAME.
+3. Update .env File: We utilize the `dotenv/load_dotenv` module to manage environment variables. In the root directory of the project, create a .env file and fill in the following fields with your MySQL database details:
+
+```bash
+DB_HOST = <<Your Host Name>>
+DB_PORT = <<Your Port Number>>
+DB_USER = <<Your Username>>
+DB_PASSWORD = <<Your Password>>
+DB_NAME = <<Your Database Name>>
+
+DJANGO_SECRET_KEY=<<Django secret key>>
+```
+DJANGO_SECRET_KEY is in setting.py file
 
 ## Migration
 
 1. Rename Table in Models: Open the models.py file in your Django app directory and change the table name as needed. For example, if you want to rename the Employee table to Staff, modify the class Meta section of your Employee model as follows:
 
 ```bash
-$ class Meta:
-    db_table = 'staff'
+class Meta:
+  db_table = 'staff'
 ```    
 
 2. Make Migrations: After configuring the database settings in the .env file, navigate to the root directory of your Django project and run the following command to create migrations based on the changes made to your models:
 
 ```bash
-$ python manage.py makemigrations
+python manage.py makemigrations
 ```
 3. Apply Migrations: Once the migrations are created, apply them to the database to update the schema:
 
 ```bash
-$ python manage.py migrate
+python manage.py migrate
 ```
 This command will create the necessary tables in the MySQL database based on the models defined in your models.py file.
-
-## MySQLClient Setup
-
-MySQLClient is configured to connect to a MySQL database. The configuration is specified in the `Employee_MS/Settings.py` file.
 
 # For Running the Application
 
 ```bash
-$ python manage.py runserver
+python manage.py runserver
 ```
 Once the application is running, open your web browser.
 
