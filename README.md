@@ -53,7 +53,10 @@ DB_PORT = <<Your Port Number>>
 DB_USER = <<Your Username>>
 DB_PASSWORD = <<Your Password>>
 DB_NAME = <<Your Database Name>>
+
+DJANGO_SECRET_KEY=<<Django secret key>>
 ```
+DJANGO_SECRET_KEY is in setting.py file
 
 ## Migration
 
