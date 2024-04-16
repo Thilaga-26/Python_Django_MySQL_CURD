@@ -1,5 +1,6 @@
 from django import forms
 from Employee.models import Employee
+from Department.models import Department
 
 class EmployeeForm(forms.ModelForm):
     GENDER_CHOICES = (
@@ -10,6 +11,7 @@ class EmployeeForm(forms.ModelForm):
     )
 
     gender = forms.ChoiceField(choices=GENDER_CHOICES, widget=forms.Select(attrs={'class': 'form-control'}))
+    department = forms.ModelChoiceField(queryset=Department.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))
 
     class Meta:
         model = Employee

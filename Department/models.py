@@ -8,5 +8,8 @@ class Department(models.Model):
     contact_phone = models.CharField(max_length=20)
     contact_email = models.EmailField()
 
+    def __str__(self):
+        return self.department
+
     class Meta:  
         db_table = "Department_Table"
