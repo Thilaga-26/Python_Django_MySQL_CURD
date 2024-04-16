@@ -60,19 +60,7 @@ DJANGO_SECRET_KEY is in setting.py file
 
 ## Migration
 
-1. Rename Table in Models: Open the models.py file in your Django app directory and change the table name as needed. For example, if you want to rename the Employee table to Staff, modify the class Meta section of your Employee model as follows:
-
-```bash
-class Meta:
-  db_table = 'staff'
-```    
-
-2. Make Migrations: After configuring the database settings in the .env file, navigate to the root directory of your Django project and run the following command to create migrations based on the changes made to your models:
-
-```bash
-python manage.py makemigrations
-```
-3. Apply Migrations: Once the migrations are created, apply them to the database to update the schema:
+Apply Migrations: Once the migrations are created, apply them to the database to update the schema:
 
 ```bash
 python manage.py migrate
