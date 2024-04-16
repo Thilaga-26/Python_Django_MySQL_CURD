@@ -11,7 +11,7 @@ def department_create(request):
             return redirect('department-list')
     else:
         form = DepartmentForm()
-    return render(request, 'department_list.html', {'form': form})
+    return render(request, 'department_create.html', {'form': form})
 
 def department_list(request):
     departments = Department.objects.all()
