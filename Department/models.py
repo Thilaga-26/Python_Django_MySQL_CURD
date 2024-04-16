@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Department(models.Model):
-    name = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
     head_of_department = models.CharField(max_length=100)
     number_of_staff = models.IntegerField()
     contact_phone = models.CharField(max_length=20)

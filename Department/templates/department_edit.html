@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "department_base.html" %}
 
 {% block title %}Update Department{% endblock title %}
 
@@ -15,8 +15,8 @@
                 <input type="text" class="form-control" name="id" id="id_id" required maxlength="20" value="{{ department.id }}" readonly />    
             </div> 
             <div class="mb-3"> 
-                <label>Name:</label>  
-                <input type="text" class="form-control" name="name" id="id_name" required maxlength="100" value="{{ department.name }}" />  
+                <label>Department:</label>  
+                <input type="text" class="form-control" name="department" id="id_department" required maxlength="100" value="{{ department.department }}" />  
             </div> 
             <div class="mb-3"> 
                 <label>Head of Department:</label>  

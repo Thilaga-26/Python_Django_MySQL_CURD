@@ -4,9 +4,9 @@ from Department.models import Department
 class DepartmentForm(forms.ModelForm):
     class Meta:
         model = Department
-        fields = ['name', 'head_of_department', 'number_of_staff', 'contact_phone', 'contact_email']
+        fields = ['department', 'head_of_department', 'number_of_staff', 'contact_phone', 'contact_email']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'department': forms.TextInput(attrs={'class': 'form-control'}),
             'head_of_department': forms.TextInput(attrs={'class': 'form-control'}),
             'number_of_staff': forms.NumberInput(attrs={'class': 'form-control'}),
             'contact_phone': forms.TextInput(attrs={'class': 'form-control'}),
