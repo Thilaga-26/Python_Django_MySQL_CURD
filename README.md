@@ -67,6 +67,12 @@ python manage.py migrate
 ```
 This command will create the necessary tables in the MySQL database based on the models defined in your models.py file.
 
+## Create admin user
+
+```bash
+$ python manage.py createsuperuser
+```
+
 # For Running the Application
 
 ```bash
