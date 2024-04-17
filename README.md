@@ -76,7 +76,7 @@ pytest
 ## Create admin user
 
 ```bash
-$ python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 # For Running the Application
