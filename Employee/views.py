@@ -27,6 +27,9 @@ def update(request, id):
     if form.is_valid():
         form.save()
         return redirect("index")
+    else:
+            # If there are validation errors, print them to the console for debugging
+            print(form.errors)
     return render(request, 'edit.html', {'form': form, 'employee': employee})
 
 def destroy(request, id):

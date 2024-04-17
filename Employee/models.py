@@ -10,7 +10,7 @@ class Employee(models.Model):
     )
 
     name = models.CharField(max_length=100) 
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, default=None)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES) 
     email = models.EmailField()  
     contact = models.CharField(max_length=15) 

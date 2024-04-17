@@ -21,5 +21,4 @@ class EmployeeForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'contact': forms.TextInput(attrs={'class': 'form-control'}),
             'address': forms.TextInput(attrs={'class': 'form-control'}),
-            'department': forms.TextInput(attrs={'class': 'form-control'}),
         }
