@@ -88,4 +88,4 @@ Once the application is running, open your web browser.
 
 Navigate to the following URL:
 
-http://127.0.0.1:8000/
+http://127.0.0.1:8000/admin
